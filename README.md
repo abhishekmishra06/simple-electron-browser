@@ -1,4 +1,4 @@
-![Screenshot 2024-10-15 170814](https://github.com/user-attachments/assets/c9985298-fa7f-4a2b-935e-c47e90643340)# Simple Electron Browser
+ # Simple Electron Browser
 
 A simple web browser built using Electron that demonstrates how to create a desktop application using web technologies like HTML, CSS, and JavaScript.
 
@@ -19,6 +19,7 @@ A simple web browser built using Electron that demonstrates how to create a desk
 ![Screenshot 2024-10-15 170610](https://github.com/user-attachments/assets/9c5249a5-b852-4e8f-8686-7222374ae868)
 
  *Main Interface: Enter a URL to start browsing.*
+ ![Screenshot 2024-10-15 170814](https://github.com/user-attachments/assets/c9985298-fa7f-4a2b-935e-c47e90643340)
  
  *New Tab Feature: Create multiple tabs for better browsing experience.*
 
