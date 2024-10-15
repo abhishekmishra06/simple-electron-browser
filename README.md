@@ -19,12 +19,12 @@ A simple web browser built using Electron that demonstrates how to create a desk
 ![Screenshot 2024-10-15 170610](https://github.com/user-attachments/assets/9c5249a5-b852-4e8f-8686-7222374ae868)
 
  *Main Interface: Enter a URL to start browsing.*
-![Uploading Screenshot 2024-10-15 170814.png…]()
+ ![Screenshot 2024-10-15 170610](https://github.com/user-attachments/assets/75bd6eb9-de5a-484a-8dd0-67c73b66e8ab)
 
  *New Tab Feature: Create multiple tabs for better browsing experience.*
 
 ## Getting Started
-
+ 
 ### Prerequisites
 
 - Install [Node.js](https://nodejs.org/) if you haven't already.
@@ -52,5 +52,8 @@ simple-electron-browser/
 ├── main.js             # Main entry point for the Electron app
 ├── package.json        # Project metadata and dependencies
 ├── .gitignore          # Files and directories to ignore in Git
+
+Feel free to modify the content to better match your project's specifics or your style! If you need help with anything else, just let me know!
+
 
 
