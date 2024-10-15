@@ -35,3 +35,22 @@ A simple web browser built using Electron that demonstrates how to create a desk
    ```bash
    git clone https://github.com/yourusername/simple-electron-browser.git
    cd simple-electron-browser
+   
+2. Install the dependencies:
+   ```bash
+   npm install
+
+3. Start the application:
+   ```bash
+   npm start
+
+
+
+Project Structure
+simple-electron-browser/
+├── index.html          # Main HTML file for the browser UI
+├── main.js             # Main entry point for the Electron app
+├── package.json        # Project metadata and dependencies
+├── .gitignore          # Files and directories to ignore in Git
+
+
