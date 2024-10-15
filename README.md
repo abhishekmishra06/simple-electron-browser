@@ -32,7 +32,9 @@ A simple web browser built using Electron that demonstrates how to create a desk
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/simple-electron-browser.git
+   git clone git@github.com:abhishekmishra06/simple-electron-browser.git
+   
+   ```bash
    cd simple-electron-browser
    
 2. Install the dependencies:
