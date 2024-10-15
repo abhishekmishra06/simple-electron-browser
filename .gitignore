@@ -1,0 +1,29 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Local configuration files
+*.env
+
+# Build output
+dist/
+build/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Electron specific files
+*.asar

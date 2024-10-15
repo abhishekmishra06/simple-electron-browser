@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Browser</title>
+    <style>
+        body { margin: 0; display: flex; flex-direction: column; height: 100vh; }
+        #navbar { display: flex; }
+        #url { flex: 1; }
+        #tabs { display: flex; border-bottom: 1px solid #ccc; }
+        .tab { padding: 10px; cursor: pointer; border: 1px solid #ccc; border-bottom: none; }
+        .tab.active { background: #f0f0f0; }
+        webview { flex: 1; border: none; }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <input type="text" id="url" placeholder="Enter URL here">
+        <button id="go">Go</button>
+        <button id="new-tab">New Tab</button>
+    </div>
+    <div id="tabs"></div>
+    <webview id="webview" partition="persist:my-partition"></webview>
+
+    <script>
+        const webview = document.getElementById('webview');
+        const urlInput = document.getElementById('url');
+        const tabsContainer = document.getElementById('tabs');
+
+        let currentTab = null;
+
+        function createTab(url = '') {
+            const tab = document.createElement('div');
+            tab.className = 'tab';
+            tab.innerText = url || 'New Tab'; // Default tab title
+            tab.onclick = () => selectTab(tab, url);
+            tabsContainer.appendChild(tab);
+            selectTab(tab, url);  // Select the new tab immediately
+        }
+
+        function selectTab(tab, url) {
+            // Clear active state from other tabs
+            Array.from(tabsContainer.children).forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            currentTab = tab;
+
+            // Load a default page or an empty page initially
+            webview.src = url || 'data:text/html,<h1>Welcome! Enter a URL above.</h1>';
+            urlInput.value = url; // Update the input field
+        }
+
+        document.getElementById('go').addEventListener('click', () => {
+            const url = urlInput.value.trim();  // Trim whitespace
+            const fullUrl = url.startsWith('http') ? url : 'http://' + url;
+
+            if (currentTab) {
+                currentTab.innerText = fullUrl; // Update the current tab's label
+            }
+            webview.src = fullUrl; // Load the URL in the webview
+        });
+
+        document.getElementById('new-tab').addEventListener('click', () => {
+            createTab(); // Create a new tab with an empty URL
+        });
+
+        // Create the first tab with an empty initial URL
+        createTab();
+    </script>
+</body>
+</html>
